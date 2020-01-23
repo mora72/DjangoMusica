@@ -25,7 +25,7 @@ SECRET_KEY = '&f6d73uz0p$@*$=fjv^ly1o$59$$p=1wucm*=-9dnno^sv*a=3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]']
 
 
 # Application definition
@@ -81,6 +81,8 @@ DATABASES = {
     }
 }
 
+LOGIN_REDIRECT_URL = 'index'
+LOGOUT_REDIRECT_URL = 'index'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

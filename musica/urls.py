@@ -19,6 +19,9 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name="index"),
+    path('register/', views.register, name="register"),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
-    path('band/', include('band.urls'))
+    path('band/', include('band.urls')),
+    path('profile/', views.profile, name="profile")
 ]

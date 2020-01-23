@@ -5,3 +5,6 @@ class Band(models.Model):
     origin = models.CharField(max_length=200)
     image = models.CharField(max_length=200)
     bio = models.TextField(max_length=2000)
+
+    def __str__(self):
+        return self.title
